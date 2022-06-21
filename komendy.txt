@@ -1,10 +1,35 @@
-{
-  "extends": [
-    "html-validate:recommended"
-  ],
+dzgie@LAPTOP-LNASUBBV MINGW64 /c/GIT/learning-git-2 (main)
+$ git init
+Reinitialized existing Git repository in C:/GIT/learning-git-2/.git/
 
-  "rules": {
-    "close-order": "error",
-    "void": ["warn", {"style": "omit"}]
-  }
-}
+dzgie@LAPTOP-LNASUBBV MINGW64 /c/GIT/learning-git-2 (main)
+$ touch .htmlvalidate.json
+
+dzgie@LAPTOP-LNASUBBV MINGW64 /c/GIT/learning-git-2 (main)
+$ html-validate index.html
+
+C:\GIT\learning-git-2\index.html
+   1:1    warning  Usage of deprecated rule "void"  deprecated-rule
+  10:24   error    Trailing whitespace              no-trailing-whitespace
+  11:26   error    Trailing whitespace              no-trailing-whitespace
+  12:27   error    Trailing whitespace              no-trailing-whitespace
+  13:777  error    Trailing whitespace              no-trailing-whitespace
+  14:32   error    Trailing whitespace              no-trailing-whitespace
+
+✖ 6 problems (5 errors, 1 warning)
+
+More information:
+  https://html-validate.org/rules/deprecated-rule.html
+  https://html-validate.org/rules/no-trailing-whitespace.html
+
+dzgie@LAPTOP-LNASUBBV MINGW64 /c/GIT/learning-git-2 (main)
+$ html-validate index.html
+
+C:\GIT\learning-git-2\index.html
+  1:1  warning  Usage of deprecated rule "void"  deprecated-rule
+
+✖ 1 problem (0 errors, 1 warning)
+
+More information:
+  https://html-validate.org/rules/deprecated-rule.html
+
